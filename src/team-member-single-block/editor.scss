@@ -1,0 +1,219 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+ .wp-block {
+   max-width:100%;
+ }
+
+.block-editor-block-list__layout {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.blocks-base-control__label {
+  display:block;
+}
+
+.wp-block-cgb-team-member-single-block {
+  background: white;
+  border-left: 0.2rem solid $black;
+  border-right: 0.2rem solid $black;
+  border-bottom: 0.2rem solid $primary-color;
+  color: $black;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0rem;
+  @include set-transition(300ms);
+
+  h2 {
+    font-family:$primary-font !important;
+    font-weight:600 !important;
+
+    .theme-single-post-title {
+       color:$black;
+       display:block;
+    }
+
+    .theme-single-post-subtitle {
+       color:$primary-color;
+       font-size:0.6em;
+       font-weight:300;
+       display:block;
+    }
+  }
+
+  .theme-row {
+    @include theme-flex;
+    align-items:stretch;
+    flex-flow:row wrap;
+    justify-content:space-between;
+
+    .theme-col {
+      flex-basis:50%;
+
+      .team-block-image {
+        width:500px;
+        height:400px;
+        background-size:cover;
+        background-position:center center;
+
+      }
+
+      .theme-team-list-info {
+        li {
+          list-style-type:disc;
+        }
+      }
+
+      ul {
+        padding:0px;
+
+        li {
+          font-family:$secondary-font;
+        }
+
+        .theme-li-title {
+          font-family:$primary-font;
+          list-style-type:none;
+          letter-spacing:0px;
+          color:$primary-color;
+          text-transform:uppercase;
+          margin-bottom:12px;
+        }
+
+        .theme-li-item {
+          margin-left:22px;
+        }
+      }
+    }
+
+  }
+}
+
+// Custom Panel styles
+
+.icon-add-list-btn {
+  background:#00A99D !important;
+  width:100% !important;
+  color:$white !important;
+  border:none !important;
+  text-align:center !important;
+  display:block;
+  font-weight:bold;
+  border-radius:0px;
+  padding:12px 0px;
+}
+
+.theme-panel-row {
+  @include theme-flex;
+  flex-flow: row nowrap;
+  margin-bottom:8px;
+
+  .components-base-control {
+    margin:0px !important;
+  }
+
+  .theme-panel-left {
+    flex-basis:20%;
+    background:$panel-blue;
+    color:$white;
+    @include theme-flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .theme-panel-right {
+    flex-basis:80%;
+
+    .icon-list-text-field {
+
+      input {
+        margin:0px !important;
+        border:none !important;
+      }
+    }
+
+    .icon-btn-group {
+      @include theme-flex;
+      align-items:stretch;
+
+      .icon-list-preview{
+         flex-basis:50%;
+         background:transparent;
+         @include theme-flex;
+         align-items:center;
+         justify-content:center;
+      }
+
+      button {
+        background:$panel-blue;
+        flex-basis:50%;
+        color:$white;
+        height:80px;
+        border:none !important;
+        @include set-transition(300ms);
+        opacity:1;
+        cursor:pointer;
+
+        &:hover {
+          opacity:0.8;
+        }
+      }
+    }
+  }
+}
+
+.icon-remove-item {
+  width:100%;
+  color:$white;
+  padding:6px 3px !important;
+  background:#ED1C24 !important;
+  border:none !important;
+  font-weight:bold !important;
+  font-size:0.8em !important;
+  display:block;
+  opacity:1;
+  @include set-transition(300ms);
+
+  &:hover {
+    opacity:0.8;
+  }
+}
+
+.wp-block-cgb-block-post-feed-block  {
+  background: white;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0rem;
+
+  .theme-post-feed {
+    padding:100px 0px 100px 0px;
+
+    .theme-row {
+      @include theme-flex;
+      flex-flow:row wrap;
+
+      .theme-col-1 {
+        flex-basis:100%;
+      }
+
+      .theme-col-2 {
+        flex-basis:50%;
+      }
+
+      .theme-col-3 {
+        flex-basis:33.3%;
+      }
+
+      .theme-col-4 {
+        flex-basis:25%;
+      }
+    }
+  }
+}

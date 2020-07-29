@@ -1,0 +1,54 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+ .call-to-action-block {
+   padding:40px 0px 40px 0px !important;
+   background:$primary-color;
+
+   .theme-row {
+     @include theme-flex;
+     flex-flow:row wrap;
+     justify-content:center;
+
+     .theme-col {
+       @include theme-flex;
+       align-items:center;
+
+       @media screen and (max-width: 768px) {
+         flex-basis:100% !important;
+         justify-content:center;
+       }
+
+
+       h3 {
+         font-size:2.2em;
+         font-weight:200;
+         text-transform:uppercase;
+         margin:0 24px 0 0 !important;
+         text-align:center;
+         font-family:$secondary-font !important;
+
+         @media screen and (max-width: 768px) {
+           flex-basis:100% !important;
+           font-size:2.0em;
+           margin:0 0 12px 0 !important;
+         }
+
+         @media screen and (max-width: 320px) {
+           flex-basis:100% !important;
+           font-size:1.4em;
+         }
+       }
+
+       input {
+         width:100%;
+       }
+
+       .theme-btn {
+         background:#000000;
+       }
+     }
+   }
+ }

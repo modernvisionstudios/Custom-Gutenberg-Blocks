@@ -1,0 +1,78 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+ .wp-block {
+   max-width:100%;
+ }
+
+.block-editor-block-list__layout {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.wp-block-cgb-three-column-list-block  {
+
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0rem;
+
+  h2 {
+    font-family:$primary-font;
+    text-transform:uppercase;
+  }
+
+  @include set-transition(300ms);
+
+  .skywalker-three-column-list-block {
+
+    @include set-transition(300ms);
+
+    h2 {
+      font-family:$primary-font;
+      text-transform:uppercase;
+    }
+
+    .skywalker-container {
+
+    .skywalker-row {
+      @include skywalker-flex;
+      justify-content:space-between;
+      flex-flow:row nowrap;
+
+      .skywalker-col {
+        flex-basis:33.3%;
+
+        div {
+
+          width:100%;
+
+          ul {
+            display:inline-block;
+            margin:0 auto;
+            width:100%;
+
+            li {
+              margin:0 0 8px 0;
+              text-align: left !important;
+              color:#6F6F6F;
+              font-weight:300 !important;
+              list-style-type:none;
+              font-family:$secondary-font;
+            }
+
+          }
+
+        }
+      }
+
+    }
+
+  }
+}
+}

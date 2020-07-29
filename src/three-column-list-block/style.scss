@@ -1,0 +1,77 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-cgb-three-column-list-block {
+
+  h2 {
+    font-size:3em;
+    font-family:$primary-font;
+    text-transform:uppercase;
+  }
+
+  .skywalker-three-column-list-block {
+
+    @include set-transition(300ms);
+
+    .skywalker-container {
+
+      max-width:1200px;
+      margin:0 auto;
+
+    .skywalker-row {
+      @include skywalker-flex;
+      justify-content:space-between;
+      flex-flow:row nowrap;
+
+      @media screen and (max-width: 767px) {
+        flex-flow:row wrap;
+      }
+
+      .skywalker-col {
+        flex-basis:33.3%;
+
+        @media screen and (max-width: 767px) {
+          flex-basis:100% !important;
+        }
+
+
+          ul {
+            display:inline-block;
+            margin:0 auto;
+
+            @media screen and (max-width: 768px) {
+              padding:0;
+            }
+
+            li {
+              margin:0 0 8px 0;
+              text-align: left !important;
+              color:#6F6F6F;
+              font-weight:300 !important;
+              list-style-type:none;
+              font-family:$secondary-font;
+              font-size:18px;
+
+              @media screen and (max-width: 768px) {
+                font-size:1.2em !important;
+                text-align:center !important;
+              }
+
+              @media screen and (max-width: 320px) {
+                font-size:1.1em !important;
+                text-align:center !important;
+              }
+
+            }
+
+
+        }
+      }
+
+    }
+   }
+  }
+}

@@ -1,0 +1,44 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+ .contact-form-block {
+
+   .theme-row {
+     @include theme-flex;
+     flex-flow:row nowrap;
+     justify-content:space-between;
+
+     @media screen and (max-width: 768px) {
+       flex-flow:row wrap;
+     }
+
+     .theme-col {
+       position:relative;
+       flex-basis:48%;
+       margin-bottom:40px;
+
+       @media screen and (max-width: 768px) {
+         flex-basis:100%;
+       }
+
+       .theme-form-title {
+         font-family:$primary-font !important;
+         color:$primary-color;
+         text-transform:uppercase;
+         font-weight:600;
+       }
+
+       p {
+         line-height:1em;
+       }
+
+       .address-section {
+         margin-bottom:40px;
+       }
+     }
+
+ }
+
+}

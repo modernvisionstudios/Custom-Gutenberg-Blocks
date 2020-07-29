@@ -1,0 +1,106 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+ .theme-email-block {
+   padding:60px 0px 60px 0px !important;
+   background:$primary-color;
+
+   .theme-row {
+     @include theme-flex;
+     flex-flow:row wrap;
+     justify-content:space-between;
+
+     .theme-col {
+       @include theme-flex;
+       align-items:center;
+       flex-basis:50%;
+
+       @media screen and (max-width: 1023px) {
+         flex-basis:100% !important;
+         margin-bottom:24px;
+       }
+
+
+       h3 {
+         font-size:36px;
+         font-weight:400;
+         text-transform:uppercase;
+         margin:0px !important;
+         text-align:left;
+         font-family:$secondary-font !important;
+
+         @media screen and (max-width: 1023px) {
+           flex-basis:100% !important;
+           font-size:2.0em;
+           text-align:center;
+         }
+
+         @media screen and (max-width: 320px) {
+           flex-basis:100% !important;
+           font-size:1.4em;
+         }
+       }
+
+       input {
+         width:100%;
+       }
+     }
+   }
+ }
+
+ #mc_embed_signup {
+
+   width:100%;
+   background:transparent !important;
+
+   #mc_embed_signup_scroll {
+     @include theme-flex;
+     flex-flow:row nowrap;
+
+     @media screen and (max-width:1023px) {
+       flex-flow:row wrap;
+     }
+
+     input[type='email'] {
+       flex-basis:80%;
+       border:none;
+       padding:12px 8px;
+       font-family:$secondary-font;
+       text-transform:uppercase;
+
+
+       @media screen and (max-width:1023px) {
+         flex-basis:100%;
+         margin-bottom:12px;
+       }
+     }
+
+     .clear{
+       flex-basis:20%;
+       @include theme-flex;
+
+       @media screen and (max-width:1023px) {
+         flex-basis:100%;
+       }
+
+       input[type='submit']{
+         background:#000000;
+         color:#ffffff;
+         font-weight:600;
+         font-family:$primary-font;
+         text-transform:uppercase;
+         border:none;
+         cursor:pointer;
+
+         @media screen and (max-width:1023px) {
+           flex-basis:100%;
+           padding-top:14px;
+           padding-bottom:14px;
+         }
+       }
+     }
+   }
+
+}

@@ -1,0 +1,29 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+ .wp-block {
+   max-width:100%;
+ }
+
+.block-editor-block-list__layout {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.blocks-base-control__label {
+  display:block;
+}
+
+.wp-block-cgb-block-post-feed-block  {
+  background: white;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0rem;
+
+}

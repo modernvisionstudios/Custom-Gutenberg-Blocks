@@ -1,0 +1,83 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+ .wp-block {
+   max-width:100%;
+ }
+
+.block-editor-block-list__layout {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.wp-block-cgb-half-and-half-block  {
+  background: white;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0rem;
+  @include set-transition(300ms);
+
+  .theme-half-and-half {
+    padding:0px 0px 0px 0px;
+    @include set-transition(300ms);
+    background-size:cover !important;
+
+
+    .theme-row {
+      @include theme-flex;
+      flex-flow:row nowrap;
+      align-items:stretch;
+
+      .theme-left-half {
+        flex-basis:50% !important;
+        @include set-transition(300ms);
+        background-size:cover !important;
+
+        @media screen and (max-width: 767px) {
+          flex-basis:100% !important;
+        }
+      }
+
+      .theme-right-half {
+        flex-basis:50% !important;
+        @include set-transition(300ms);
+        @include theme-flex;
+        flex-flow:column;
+
+        @media screen and (max-width: 767px) {
+          flex-basis:100% !important;
+        }
+
+        h2 {
+          font-family:$primary-font;
+          font-weight:800;
+          text-transform:uppercase;
+          font-size:1.5em;
+        }
+
+        p {
+          font-size:0.8em;
+        }
+
+        .right-half-container {
+          width:80%;
+          padding:0px 20px;
+
+          @media screen and (max-width: 768px){
+            width:100%;
+          }
+        }
+
+        .theme-btn {
+          font-size:0.8em;
+        }
+      }
+    }
+  }
+}

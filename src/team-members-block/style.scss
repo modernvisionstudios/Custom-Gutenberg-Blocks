@@ -1,0 +1,88 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+ .theme-team-members-feed-block {
+
+   h2 {
+     font-family:$primary-font !important;
+     font-weight:600 !important;
+     font-size:3.0em;
+     text-transform:uppercase;
+   }
+
+   .theme-row {
+     @include theme-flex;
+     flex-flow:row wrap;
+     justify-content:space-between;
+
+     .theme-col {
+       background:$gray;
+       position:relative;
+       box-sizing:border-box;
+       overflow:hidden;
+
+       .full-post-link {
+         position:absolute;
+         width:100%;
+         height:100%;
+         z-index:10;
+         left:0;
+         top:0;
+         background:#000000;
+         opacity:0;
+         @include set-transition(300ms);
+
+         &:hover {
+           opacity:0.5;
+         }
+       }
+
+       .theme-team-member {
+
+         font-weight:400;
+         text-transform:uppercase;
+         position:absolute;
+         z-index:20;
+         left:50%;
+         bottom:-50%;
+         color:#ffffff;
+         width:100%;
+         opacity:0;
+
+         transform:translateX(-50%);
+         @include set-transition(300ms);
+
+         h3 {
+           margin:0px;
+           font-size:1.8em;
+         }
+
+         p {
+           margin:0px;
+           font-size:1.2em;
+           color:#ffffff;
+         }
+       }
+     }
+   }
+
+   .theme-post-img {
+     height:350px;
+     overflow:hidden;
+     width:100%;
+     background-size:cover !important;
+     background-repeat:no-repeat !important;
+     background-position:center center !important;
+
+     @media screen and (max-width: 600px) {
+       height:400px;
+     }
+   }
+ }
+
+ .theme-title-visible {
+    bottom:5% !important;
+    opacity:1 !important;
+ }

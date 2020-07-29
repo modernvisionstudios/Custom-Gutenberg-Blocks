@@ -1,0 +1,69 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+ .theme-post-feed {
+
+   text-align:center;
+
+   h2 {
+     font-family:$primary-font;
+     text-transform:uppercase;
+     font-size:48px;
+     margin-top:0;
+   }
+
+   .theme-row {
+     @include theme-flex;
+     flex-flow:row wrap;
+     justify-content:center;
+
+     .theme-col {
+       background:$gray;
+       position:relative;
+       margin:6px;
+
+       .full-post-link {
+         position:absolute;
+         width:100%;
+         height:100%;
+         z-index:10;
+         left:0;
+         top:0;
+
+         &:hover {
+           .theme-col {
+             opacity:0.5;
+           }
+         }
+       }
+
+       h3 {
+         font-size:1.2em;
+         font-weight:400;
+         text-transform:uppercase;
+       }
+     }
+   }
+
+   .theme-post-img {
+     height:250px;
+     overflow:hidden;
+     width:100%;
+     background-size:cover !important;
+     background-repeat:no-repeat !important;
+   }
+
+   .theme-btn {
+     background:#000000;
+     margin-top:40px;
+     @include set-transition(300ms);
+
+
+     &:hover {
+       background:$primary-color;
+     }
+   }
+
+ }

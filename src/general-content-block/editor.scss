@@ -1,0 +1,47 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+ .wp-block {
+   max-width:100%;
+ }
+
+.block-editor-block-list__layout {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.wp-block-cgb-general-content-block  {
+
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0rem;
+
+  @include set-transition(300ms);
+
+  .theme-general-content {
+    padding:0px 0px 0px 0px;
+    @include set-transition(300ms);
+
+    h2 {
+      font-family:$primary-font;
+      text-transform:uppercase !important;
+    }
+
+    p {
+      line-height:1.4em;
+      color:#6F6F6F !important;
+    }
+
+    .theme-container {
+      max-width:1200px;
+      margin:0 auto;
+
+    }
+  }
+}

@@ -1,0 +1,107 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+ .wp-block-cgb-icon-repeater-block {
+
+   h2 {
+     font-family:$primary-font !important;
+     font-weight:600 !important;
+     font-size:48px;
+     text-transform:uppercase;
+     margin-bottom:60px !important;
+   }
+
+   .theme-icon-row {
+     @include theme-flex;
+     align-items:stretch;
+     flex-flow:row wrap;
+     justify-content:space-between;
+
+     .theme-icon-col {
+
+       @include theme-flex;
+       flex-basis:50%;
+       flex-flow:row nowrap;
+       margin-bottom:12px;
+       justify-content:center;
+
+       @media screen and (max-width: 767px) {
+         flex-flow:row wrap;
+       }
+
+       .theme-icon-col-left {
+         flex-basis: 30%;
+         background: transparent;
+         @include theme-flex;
+         align-items: flex-start;
+         justify-content: flex-end !important;
+         margin-right:18px;
+
+         img {
+           width:40px;
+           height:auto;
+         }
+
+         @media screen and (max-width: 767px) {
+           flex-basis:100%;
+           margin-bottom:18px;
+           margin-right:0px;
+           justify-content:center !important;
+           align-items:flex-start;
+         }
+       }
+
+       .theme-icon-col-right {
+         flex-basis:70%;
+         @include theme-flex;
+         flex-flow:column nowrap;
+         align-items:flex-start;
+
+         @media screen and (max-width: 767px) {
+           flex-basis:100%;
+           align-items:center;
+         }
+
+         h3 {
+           font-size:1.4em !important;
+           font-weight:400 !important;
+           text-align:left;
+           margin:0px 0px 12px 12px;
+           text-transform:uppercase;
+
+           @media screen and (max-width: 767px) {
+             text-align:center !important;
+             margin:0px 0px 12px 0px;
+           }
+
+           @media screen and (max-width: 500px) {
+             font-size:1.4em !important;
+           }
+
+           @media screen and (max-width: 320px) {
+             font-size:1.1em !important;
+           }
+         }
+
+         p {
+           font-size:1.2em !important;
+           font-weight:300 !important;
+           text-align:left !important;
+           margin:0px 0px 30px 12px;
+           width:80%;
+           color:#6f6f6f !important;
+
+           @media screen and (max-width: 767px) {
+             text-align:center !important;
+             margin:0px 0px 12px 0px;
+           }
+         }
+
+
+       }
+     }
+   }
+ }

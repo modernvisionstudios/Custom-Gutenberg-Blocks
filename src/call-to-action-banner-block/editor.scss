@@ -1,0 +1,67 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+ .wp-block {
+   max-width:100%;
+ }
+
+.block-editor-block-list__layout {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.blocks-base-control__label {
+  display:block;
+}
+
+.wp-block-cgb-call-to-action-banner-block  {
+  background: white;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0rem;
+
+  .call-to-action-block {
+    padding:40px 0px 40px 0px !important;
+    background:$primary-color;
+
+    .theme-row {
+      @include theme-flex;
+      flex-flow:row wrap;
+      justify-content:center;
+
+      .theme-col {
+        @include theme-flex;
+        align-items:center;
+
+        @media screen and (max-width: 768px){
+          justify-content:center;
+        }
+
+        h3 {
+          font-size:1.2em;
+          font-weight:400;
+          text-transform:uppercase;
+          margin:0 24px 0 0 !important;
+
+          @media screen and (max-width: 768px){
+            margin:0 0 24px 0 !important;
+          }
+        }
+
+        input {
+          width:100%;
+        }
+
+        .theme-btn {
+          background:#000000;
+        }
+      }
+    }
+  }
+}

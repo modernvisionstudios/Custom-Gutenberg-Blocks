@@ -1,0 +1,98 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+ .wp-block {
+   max-width:100%;
+ }
+
+.block-editor-block-list__layout {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.blocks-base-control__label {
+  display:block;
+}
+
+.wp-block-cgb-block-post-feed-block  {
+  background: white;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0rem;
+
+  .theme-post-feed {
+
+    h2 {
+      font-family:$primary-font;
+      text-transform:uppercase;
+    }
+
+    .theme-row {
+      @include theme-flex;
+      flex-flow:row wrap;
+      justify-content:space-between;
+
+      .theme-col {
+        background:$gray;
+        position:relative;
+
+        .full-post-link {
+          position:absolute;
+          width:100%;
+          height:100%;
+          z-index:10;
+          left:0;
+          top:0;
+
+          &:hover {
+            .theme-col {
+              opacity:0.5;
+            }
+          }
+        }
+
+        h3 {
+          font-size:1.2em;
+          font-weight:400;
+          text-transform:uppercase;
+        }
+      }
+
+      .theme-col-1 {
+        flex-basis:100%;
+        text-align:center;
+      }
+
+      .theme-col-2 {
+        flex-basis:50%;
+        text-align:center;
+      }
+
+      .theme-col-3 {
+        flex-basis:32.3% !important;
+        text-align:center;
+
+      }
+
+      .theme-col-4 {
+        flex-basis:25%;
+        text-align:center;
+
+      }
+    }
+
+    .theme-post-img {
+      height:250px;
+      overflow:hidden;
+      width:100%;
+      background-size:cover !important;
+      background-repeat:no-repeat !important;
+    }
+  }
+}

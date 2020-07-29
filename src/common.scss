@@ -1,0 +1,711 @@
+/***************************************
+Common SASS
+
+* Effects Front And Backend Styles
+
+***************************************/
+
+/***************************************
+Fonts
+***************************************/
+
+$primary-font: 'interstate-mono', monospace;
+$secondary-font: 'roboto-condensed', sans-serif;
+
+/***************************************
+Colors
+***************************************/
+
+$primary-color: #58C9E8;
+$secondary-color: pink;
+$black: #000000;
+$white: #ffffff;
+$gray: #dedede;
+
+/***************************************
+Panel Colors
+***************************************/
+
+$panel-blue:#007CBA;
+
+/***************************************
+Mixins
+***************************************/
+
+@mixin skywalker-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin set-transition($speed) {
+  -ms-transition:all $speed ease-in-out;
+  -o-transition:all $speed ease-in-out;
+  -moz-transition:all $speed ease-in-out;
+  -webkit-transition:all $speed ease-in-out;
+  transition:all $speed ease-in-out;
+}
+
+/***************************************
+Global Editor Styles
+***************************************/
+
+.editor-styles-wrapper {
+  background:#ffffff !important;
+}
+
+.editor-post-title__input {
+  font-size:48px !important;
+}
+
+.editor-url-input {
+  input {
+    width:100% !important;
+  }
+}
+
+/***************************************
+Custom Panel Styles
+***************************************/
+
+.icon-add-list-btn {
+  background:#00A99D !important;
+  width:100% !important;
+  color:$white !important;
+  border:none !important;
+  text-align:center !important;
+  display:block;
+  font-weight:bold;
+  border-radius:0px;
+  padding:12px 0px;
+}
+
+.skywalker-panel-row {
+  @include skywalker-flex;
+  flex-flow: row nowrap;
+  margin-bottom:8px;
+
+  .components-base-control {
+    margin:0px !important;
+  }
+
+  .skywalker-panel-left {
+    flex-basis:20%;
+    background:$panel-blue;
+    color:$white;
+    @include skywalker-flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .skywalker-panel-right {
+    flex-basis:80%;
+
+    .icon-list-text-field {
+
+      input {
+        margin:0px !important;
+        border:none !important;
+      }
+    }
+
+    .icon-btn-group {
+      @include skywalker-flex;
+      align-items:stretch;
+
+      .icon-list-preview{
+         flex-basis:50%;
+         background:transparent;
+         @include skywalker-flex;
+         align-items:center;
+         justify-content:center;
+      }
+
+      button {
+        background:$panel-blue;
+        flex-basis:50%;
+        color:$white;
+        height:80px;
+        border:none !important;
+        @include set-transition(300ms);
+        opacity:1;
+        cursor:pointer;
+
+        &:hover {
+          opacity:0.8;
+        }
+      }
+    }
+  }
+}
+
+.icon-remove-item {
+  width:100%;
+  color:$white;
+  padding:6px 3px !important;
+  background:#ED1C24 !important;
+  border:none !important;
+  font-weight:bold !important;
+  font-size:0.8em !important;
+  display:block;
+  opacity:1;
+  @include set-transition(300ms);
+
+  &:hover {
+    opacity:0.8;
+  }
+}
+
+/***************************************
+Global Base Styles
+***************************************/
+
+body {
+  margin:0;
+  padding:0;
+  background:$white;
+}
+
+h1 {
+  @media screen and (max-width: 500px) {
+    font-size:36px;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size:24px;
+  }
+}
+
+h2 {
+
+  @media screen and (max-width: 767px) {
+    text-align:center !important;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size:36px !important;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size:24px !important;
+  }
+
+}
+
+h3 {
+  font-family:$primary-font !important;
+  font-weight:800 !important;
+  text-transform:uppercase;
+}
+
+p {
+  font-family:$secondary-font !important;
+  font-weight:300;
+  font-size:1.2em;
+  line-height:1.4em;
+  color:#6f6f6f;
+
+  @media screen and (max-width: 767px) {
+    text-align:center !important;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size:1.1em !important;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size:1.1em !important;
+  }
+}
+
+.skywalker-btn {
+  display:inline-block;
+  padding:12px 14px;
+  text-decoration:none !important;
+  color:#ffffff !important;
+  background:#58C9E8;
+  font-family:$primary-font;
+  text-transform:uppercase;
+  font-size:1.4em;
+}
+
+/***************************************
+Single Team Styles
+***************************************/
+
+.single-our_team {
+
+  h3{color:$primary-color;}
+
+  ul {
+    padding:0;
+
+    li {
+      list-style-type:none;
+      font-family:$secondary-font;
+      color:#6f6f6f;
+      font-weight:300;
+    }
+  }
+
+}
+
+/***************************************
+Theme Toggle Styles
+***************************************/
+
+.theme-default {
+
+  background:$white !important;
+
+  h2 {
+    color:$black !important;
+  }
+
+  p{
+    color:$black !important;
+  }
+
+  .skywalker-btn {
+    background:$black !important;
+    color:$white !important;
+    font-family:$primary-font;
+    text-transform:uppercase !important;
+
+    @include set-transition(300ms);
+
+    &:hover {
+      background:$primary-color !important;
+      @include set-transition(300ms);
+    }
+  }
+}
+
+.theme-primary {
+
+  background:$gray !important;
+
+  h2 {
+    color:$black !important;
+  }
+
+  p{
+    color:$black !important;
+  }
+
+  .skywalker-btn {
+    background:$black !important;
+    color:$white !important;
+    font-family:$primary-font;
+    text-transform:uppercase !important;
+
+    @include set-transition(300ms);
+
+    &:hover {
+      background:$primary-color !important;
+      @include set-transition(300ms);
+    }
+  }
+}
+
+.theme-secondary {
+
+  background:$black !important;
+
+  h2 {
+    color:$primary-color !important;
+  }
+
+  p {
+    color:$white !important;
+  }
+
+  .skywalker-btn {
+    background:$primary-color !important;
+    color:$black !important;
+    font-family:$primary-font;
+    text-transform:uppercase !important;
+
+    @include set-transition(300ms);
+
+    &:hover {
+      background:$white !important;
+      color:$black !important;
+      @include set-transition(300ms);
+    }
+  }
+}
+
+/***************************************
+Theme Toggle For Icon List
+***************************************/
+.icon-theme-default {
+
+  background:$white !important;
+
+  p {
+    color:$black !important;
+  }
+
+  .skywalker-icon-col-left {
+    justify-content:center !important;
+  }
+
+  .skywalker-icon-col-right {
+    justify-content:center !important;
+
+    h2 {
+      color:$black !important;
+    }
+  }
+
+}
+
+.icon-theme-primary {
+
+  background:$gray !important;
+
+  p {
+    color:$black !important;
+  }
+
+  .skywalker-icon-col-left {
+    justify-content:center !important;
+  }
+
+  .skywalker-icon-col-right {
+    justify-content:center !important;
+
+    h2 {
+      color:$black !important;
+    }
+  }
+
+}
+
+.icon-theme-secondary {
+
+  background:$white !important;
+
+  p {
+    color:$gray !important;
+  }
+
+
+  .skywalker-icon-col-right {
+
+    h3 {
+      color:$primary-color !important;
+    }
+  }
+
+}
+
+/***************************************
+Alignment Toggle Styles
+***************************************/
+
+.align-left {
+  text-align: left;
+  h2 {
+    text-align:left;
+  }
+
+  p {
+    text-align:left;
+  }
+
+  .skywalker-btn {
+      text-align:left;
+      margin-right:auto;
+  }
+}
+
+.align-center {
+  text-align: center;
+  h2 {
+    text-align:center;
+  }
+
+  p {
+    text-align:center;
+  }
+
+  .skywalker-btn {
+    margin:0px auto;
+    text-align:center;
+  }
+}
+
+.align-right {
+  text-align: right;
+  h2 {
+    text-align:right;
+  }
+
+  p {
+    text-align:right;
+  }
+
+  .skywalker-btn {
+    margin-left:auto;
+    text-align:right;
+  }
+
+}
+
+/***************************************
+Container Toggle Styles
+***************************************/
+
+.skywalker-container-800 {
+  max-width:800px;
+  margin:0px auto;
+  @include set-transition(300ms);
+  padding:0 3% 0 3%;
+  position:relative;
+}
+
+.skywalker-container-1200 {
+  max-width:1200px;
+  margin:0px auto;
+  @include set-transition(300ms);
+  padding:0 3% 0 3%;
+  position:relative;
+}
+
+.skywalker-padding-top {
+  padding-top:80px !important;
+
+  @media screen and (max-width: 1024px) {
+    padding-top:60px !important;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding-top:40px !important;
+  }
+}
+
+.skywalker-padding-bottom {
+  padding-bottom:80px !important;
+
+  @media screen and (max-width: 1024px) {
+    padding-bottom:60px !important;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding-bottom:40px !important;
+  }
+}
+
+
+
+/***************************************
+Column Size Toggle Styles
+***************************************/
+
+
+.skywalker-col-1 {
+  flex-basis:100% !important;
+  text-align:center;
+}
+
+.skywalker-col-2 {
+  flex-basis:49% !important;
+  text-align:center;
+
+  &::after {
+    content: "";
+    flex: auto;
+  }
+
+  @media screen and (max-width:767px) {
+    flex-basis:100% !important;
+    margin-bottom:18px;
+  }
+}
+
+.skywalker-col-3 {
+  flex-basis:31.3% !important;
+  text-align:center;
+
+  @media screen and (max-width:1024px) {
+    flex-basis:47% !important;
+    margin-bottom:18px;
+  }
+
+  @media screen and (max-width:600px) {
+    flex-basis:100% !important;
+    margin-bottom:18px;
+  }
+
+}
+
+.skywalker-col-4 {
+  flex-basis:25% !important;
+  text-align:center;
+
+
+  @media screen and (max-width:1024px) {
+    flex-basis:49% !important;
+    margin-bottom:18px;
+  }
+
+  @media screen and (max-width:600px) {
+    flex-basis:100% !important;
+    margin-bottom:18px;
+  }
+
+}
+
+/***************************************
+Swiper Slider Styles
+***************************************/
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width:100%;
+  height:auto !important;
+
+  img {
+    width:100%;
+    height:auto;
+  }
+}
+
+/***************************************
+Gravity Forms Styles
+***************************************/
+
+.gform_wrapper {
+  text-align:left;
+  box-sizing:border-box;
+  background:#ffffff;
+
+  .gform_body {
+
+    .gform_fields {
+      list-style-type:none;
+      padding:0px;
+
+       .gfield {
+
+          .gfield_label {
+            font-family:$secondary-font;
+            display:none !important;
+          }
+
+          input,.textarea {
+            width:100%;
+            font-family:$secondary-font;
+            padding:12px 8px;
+            border: 3px solid #000000;
+            margin-bottom:12px;
+            box-sizing: border-box;
+          }
+
+          .hidden_sub_label {
+            display:none;
+          }
+       }
+
+    }
+
+  }
+
+  .gform_footer {
+    input[type="submit"]{
+      width:100%;
+      font-family:$primary-font;
+      padding:12px 8px;
+      font-weight:400;
+      text-transform:uppercase;
+      background:$black;
+      color:#ffffff;
+      cursor:pointer;
+      border:3px solid $black;
+      @include set-transition(300ms);
+
+      &:hover {
+        background:transparent;
+        border:3px solid $black;
+        color:$black;
+      }
+    }
+  }
+}
+
+/***************************************
+Animation
+***************************************/
+
+@keyframes heroArrow {
+  0% {
+    bottom:5%;
+  }
+
+  50% {
+    bottom:8%;
+  }
+
+  100% {
+    bottom:5%;
+  }
+}
+
+
+/***************************************
+Swiper Global Styles
+***************************************/
+
+.swiper-button-prev {
+  outline:none;
+
+  &::after {
+    content:'\f0d9' !important;
+    font-family: "Font Awesome 5 Free" !important;
+    color:#000000;
+    font-weight:900;
+
+    &:hover {
+      color:$primary-color;
+    }
+  }
+}
+
+.swiper-button-next {
+  outline:none;
+
+  &::after {
+    content:'\f0da' !important;
+    font-family: "Font Awesome 5 Free" !important;
+    color:#000000;
+    font-weight:900;
+
+    &:hover {
+      color:$primary-color;
+    }
+  }
+}
